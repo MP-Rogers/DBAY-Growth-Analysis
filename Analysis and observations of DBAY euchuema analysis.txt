@@ -1,0 +1,71 @@
+May 5, 2023 observations
+
+[1] "The mean growth rate is to be 6.0618  grams per day + or - 5.2963"
+[1] "The mean percentage growth rate is to be 5.8711  % per day + or - 3.5218"
+[1] "The estimated mean time to double in size is  12  days(to the nearest day)"
+
+From graph of mass against time
+	aside from the 2 samples with noted ice ice breakage on april 26, all sampls grew in mass
+	Even ice ice samples grow to above their initial weight by May 3
+	Most samples seem to be growing faster in mass  btw april 26 and may 5
+	
+From mean absolute growth rate  against time
+	Most around 6g per day as of may 6
+	Ranges from (1.4% -12%) april 26 to (22%-0.7%) may 3
+	Most clustered around the 5g per day mark
+	
+From graph of percentage growth rate against time
+	percentages are a lot tighter than absolute mass growth rates (2% - 9% per day)
+	2 -ve outliers from ice ice breakage
+	even outliers fall close to the cluster of % by may 3
+	
+Total Mass of Samples: 3.44kg
+Mean Mass of Samples: 190g
+_______________________________________________
+May 10, 2023 Data observations
+
+[1] "The mean growth rate is to be 6.604  grams per day + or - 5.2338"
+[1] "The mean percentage growth rate is to be 5.4345  % per day + or - 2.9735"
+[1] "The estimated mean time to double in size is  13  days(to the nearest day)"
+
+Total mass of samples has gone from: 1.7kg initally to 3.4kg(May 3) 4.46kg
+Mean Mass is 223g up from 170g on May 3
+
+From the graph of mass against time
+	growth of all samples increasing
+	Some samples have grown to "catch up other samples which began slightly heavier
+	Not all samples growing at same rate/ not in the same mass order anymore
+	
+From Mean absolute growth against time
+	Growth still scattered
+	for most, absolute growth rate has eaither decreased or leveled off
+	
+For mean percentage growth rate
+	Still a much tighter clusering than absolute growth rate
+	Clustered mostly btw 3 and 5% growth per day
+	Its more tightly clustered than it was last week, 
+	
+Total Mass of samples: 4.46kg
+Mean Mass of Samples: 223g
+
+__________________________________________________
+May 17, 2023 Data Observations:
+
+1] "The mean growth rate is to be 6.846  grams per day + or - 5.6187"
+[1] "The mean percentage growth rate is to be 5.4668  % per day + or - 4.9329"
+[1] "The estimated mean time to double in size is  13  days(to the nearest day)
+
+Total Mass: 5.41kg
+Mean Mass: 270.75
+
+From the graph of mass against time
+	All increasing
+	rate of increase changing
+	Order of mass changing(some outpacing others)
+
+For mean percentage growth rate
+	Very tight cluster
+	Appears to be trending down (SA=urface are to volume? croweded lines?)
+	No longe
+	
+No significany difernce in percentage grwoth rate between raft and line. some colour and growth form differences tho
