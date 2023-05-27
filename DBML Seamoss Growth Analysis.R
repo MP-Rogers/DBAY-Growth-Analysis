@@ -36,15 +36,17 @@ Basic.Visualizing<-function(dataset){
   data<-dataset
   print(summary(data))
   #glimpse(data)
-  
-  p<- data %>% ggplot(mapping=aes(x = Day, y = Mass, colour = Identifier))+
+  #data<-data |> group_by(Day) |> mutate(mean.mass = mean(mass))
+  p<-data %>% ggplot(mapping=aes(x = Day, y = Mass, colour = Identifier))+
     geom_point(alpha = 0.6, size = 1.8)+
     geom_line(alpha = 0.6)+
     geom_smooth(method=lm, se=FALSE, colour ="black", linetype = "dashed")+
-    #geom_abline(intercept = 17.39, slope = 0.1068)+#taken from a linear model
-    #Maybe add an aesthetic for species
+    #stat_poly_eq(use_label(c("eq", "R2")))+
     labs(title = "Mass of Seaweed Samples at Different Days", x="Day", y="Mass(grams)")+
     theme(plot.title = element_text(hjust = 0.5),legend.position = "none")
+    #stat_smooth()+
+    #stat_regline_equation()
+  print(p + facet_wrap(data$Method))
   p.interactive<-ggplotly(p, tooltips = c("x","y", "text"))
   print(p.interactive)
   
@@ -109,26 +111,31 @@ testing<-function(dataset){
 #Attempt the Multiple Polynomial fitting thing, now it works still needs to be visualized
 #https://www.statology.org/curve-fitting-in-r/
 Curve.Fitting.Attempt<-function(dataset){
-  d<-dataset[,c(2,3)]
+  d<-dataset[,c(4,5)]
+  d$Day<-as.double.difftime(d$Day)
+  age<-d$Day
   age2<-d$Day^2
   age3<-d$Day^3
   age4<-d$Day^4
-  model1<-lm(circumference ~ age, data = d)
-  model2<-lm(circumference ~ age + age2,data = d)
-  model3<-lm(circumference ~ age + age2 + age3,data = d)
-  model4<-lm(circumference ~ age + age2 + age3 + age4,data = d)
+  model1<-lm(Mass ~ age, data = d)
+  model2<-lm(Mass ~ age + age2,data = d)
+  model3<-lm(Mass ~ age + age2 + age3,data = d)
+  model4<-lm(Mass ~ age + age2 + age3 + age4,data = d)
   model1.summary<-aov(model1)
   model2.summary<-aov(model2)
   model3.summary<-aov(model3)
+  model4.summary<-aov(model4)
   # look at sgnificance added by each term to see which model is sufficient
   print("Summary of the linear model")
   print(summary(model1.summary))
+  print(model1)
   print("Summary of the quadratic model")
   print(summary(model2.summary))
   print("Summary of the cubic model")
   print(summary(model3.summary))
-  print("Summary of the best model")
-  print(summary(model1))# model 1 in this case, but whichever model is best
+  print("Summary of the 4th order model")
+  print(summary(model4.summary))
+  #print(summary(model1))# model 1 in this case, but whichever model is best
 }
 
 
@@ -192,7 +199,7 @@ Other.Visualizations<-function(dataset){
     geom_hline(yintercept = avg.growth.rate, linetype = "dashed", size = 1)+
     #geom_ribbon(alpha = 0.1, aes(ymin=(avg.growth.rate-sd.growth.rate), ymax=(avg.growth.rate+sd.growth.rate)))+ #shows std deviation
     labs(x="Days", y = "Growth Rate(k), g/day", title="Growth Rate showing mean growth rate")+
-    theme(plot.title = element_text(hjust = 0.5))
+    theme(plot.title = element_text(hjust = 0.5), legend.position = "none")
   graph.1<-ggplotly(graph.1)
   print(graph.1)
   
@@ -201,12 +208,13 @@ Other.Visualizations<-function(dataset){
     geom_line(alpha = 0.8)+
     labs(x="Days", y = "percentage Growth Rate(k)", title="Percentage Growth Rate showing mean")+
     geom_hline(yintercept = avg.percent.growth, linetype = "dashed", size = 1)+
+    #geom_smooth(method = lm, se= FALSE, linetype = "dashed")+
     #geom_ribbon(alpha =0.1, aes(ymax=avg.percent.growth+sd.percent.growth, ymin = avg.percent.growth-sd.percent.growth))+#shows std deviation
     theme(plot.title = element_text(hjust = 0.5))
   graph.3<-ggplotly(graph.3)
   print(graph.3)
   
-  d2<- data |> group_by(Day) |> mutate(total.mass = sum(Mass)) |> mutate(mean.mass = mean(Mass))
+  d2<- data |> group_by(Day) |> mutate(total.mass = sum(Mass)) |> mutate(mean.mass = mean(Mass)) |> mutate(mean.k = mean(percent.k))
   graph.4<-ggplot(d2, mapping=aes(x = Day, y = total.mass))+
     geom_point(alpha = 0.8, size = 2)+
     geom_line(alpha = 0.8)+
@@ -219,13 +227,27 @@ Other.Visualizations<-function(dataset){
   graph.5<-ggplot(d2, mapping=aes(x = Day, y = mean.mass))+
     geom_point(alpha = 0.8, size = 2)+
     geom_line(alpha = 0.8)+
+    stat_poly_eq(use_label(c("eq", "R2")))+
     labs(title="Mean mass of sampled seaweed over time")+
     ylab ("Mean mass of all seaweed sampled (grams)")+
     theme(plot.title = element_text(hjust = 0.5))
   graph.5<-ggplotly(graph.5)
-    
   print(graph.5)
+  
+
+  graph6<-ggplot(d2, mapping=aes(x = Day, y = mean.k))+
+    geom_point(alpha = 0.8, size = 2)+
+    geom_line(alpha = 0.8)+
+    labs(title="Mean percentage growth rate of sampled seaweed over time")+
+    ylab ("Mean perectage growth of all seaweed sampled (grams)")+
+    theme(plot.title = element_text(hjust = 0.5))
+  graph.6<-ggplotly(graph6)
+  print(graph.6)
+  print(graph6)
+  
+  
   return(data)
+  
   
   
   
@@ -275,12 +297,28 @@ Potential.Revenue<-function(dataset){
   
 }
 
+Possible.Production.Time<-function(dataset){
+  data<-dataset
+  perc.growth.rates<-na.omit(data$percent.k)
+  perc.growth.rates<-perc.growth.rates[is.finite(perc.growth.rates)]
+  r<-round(mean(perc.growth.rates),4)
+  starting.stock<-readline("How many kg of seaweed are you starting with:")
+  starting.stock<-as.double(starting.stock)
+  final.amount<-readline("How many kg of seaweed would you like to produce:")
+  final.amount<-as.double(final.amount)
+  t<-(log(final.amount/starting.stock))/(log(1+(r/100)))
+  t<-round(t, 2)
+  print(paste("Under current conditions, to produce that much would take ", t, " days or ", t/7, " weeks"))
+  
+}
+
 #---------------------------------------------------------------------
 
 
 #Load packages
 library(tidyverse)
 library(ggpubr)
+library(ggpmisc)
 library(lubridate)
 library(plotly)
 library(readxl)
@@ -293,10 +331,11 @@ Basic.Visualizing(dataset)
 #testing(dataset)
 #Curve.Fitting.Attempt(dataset)
 dataset<-Calc.Doubling.Rate(dataset)
-#Potential.Revenue(dataset)
+#Possible.Production.Time(dataset)
+Potential.Revenue(dataset)
 Method.Test(dataset)
 Other.Visualizations(dataset)
-#Possible.Production.Hectare(dataset)
+Possible.Production.Hectare(dataset)
 
 
 

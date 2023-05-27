@@ -9,13 +9,15 @@ toc: true
 prefer-html: true
 ---
 
-Last Edit: may 19, 2023
+Last Edit: may 24, 2023
 
 # Irish Moss Cultivation Project
 
 ![Matthew-Pierre Rogers with a line of Eucheuma cotonii](Images/May%2017,%202023/WhatsApp%20Image%202023-05-17%20at%2010.08.10%20AM.jpeg){fig-align="center" width="346"}
 
-This project serves as a preliminary attempt to begin the cultivation of Irish Moss at the Discovery Bay Marine Lab. This document outlines some of the rationale, methods and procedures and results undertaken during the course of this project.
+{{< pagebreak >}}
+
+This project serves as a preliminary attempt to begin the cultivation of Irish Moss, *Eucheuma cotonii*, at the Discovery Bay Marine Lab. This document outlines some of the rationale, methods and procedures and results undertaken during the course of this project.
 
 ## Background
 
@@ -23,13 +25,17 @@ Jamaica has been noted to have some of the most overfished waters in the Caribbe
 
 At the same time, environmental degradation from development, climate change and the ecosystem effects of overfishing further reduce the sustainability and productivity of the fisheries sector.
 
+Seaweed mariculture provides the unique opportunity for fisherfolk and fisherfolk communties to use much of their existing skillset, to transition to a sustainable alternative livelihood.
+
+{{< pagebreak >}}
+
 ## Introduction
 
 Jamaica has a tradition of utilizing seaweeds in some traditional foods and beverages. Many species collectively called "Sea moss" and "Irish Moss" are consumed locally. As with many sales of agricultural/natural products, many sales occur informally.
 
-However effectively all the seamoss sold locally is harvested wild by divers and fisher folk. Despite the high value of the product, (Over the course of the project, prices per pound ranged from \$2000 to \$5000 jmd), there is no cultivation of the seamoss, which can lead to depletion of natural stocks.
+However, effectively all the seamoss sold locally is harvested from wild populations by divers and fisher folk. Despite the high value of the product, (over the course of the project, prices per pound ranged from \$2000 to \$5000 jmd), there is no cultivation of the seamoss, which can lead to depletion of natural stocks.
 
-The project seeks to explore the potential viability of cultivating irish moss locally. Specifically this project involves a small scale cultivation of **Euchuema cotonii** using different methods.
+The project seeks to explore the potential viability of cultivating irish moss locally. Specifically this project involves a small scale cultivation of *Euchuema cotonii* using different methods.
 
 ## Rationale
 
@@ -44,9 +50,11 @@ There are several aims and objectives undertaken with this project:
 
 1.  To attempt to grow commercially important seaweed species locally
     1.  To determine suitable conditions for growing Irish moss locally in Jamaica
-    2.  To determine methods of cultivation which work best in a Jamaican context
+    2.  To determine compare 2 methods of cultivation and determine which work best in a Jamaican context
 2.  To quantify the mean growth rate of the seaweed
 3.  To determine the potential profitability of cultivating seaweed in Jamaica
+
+{{< pagebreak >}}
 
 ## Methods
 
@@ -54,11 +62,9 @@ For this project, *Eucheuma cotonii*, one of many species of seaweed commonly kn
 
 The Off-Bottom method was adapted from previous efforts by the Discovery Bay Marine Lab to cultivate *Eucheuma*. Two pieces of iron rebar were driven into the sandy substrate using a combination of a hammer and body weight. A rope was run between the two rebar posts by untwisting the rope and running the rebar through the gap. This was followed by tying the remaining length to further secure the rope.
 
-**IMAGE OF LINE**
+![Image of off bottom line](Images/May%2024,%202023/Off-Bottom-3.jpg){fig-align="center" width="431"}
 
-For the raft method, a small raft was constructed. This raft consisted of two metre long 3/4" PVC pipes capped with 3/4" PVC caps at the ends. four 2.5 metre 5mm polypropene ropes were drilled through to ropes. Buoys were used to keep the raft afloat, but bottle floats should also be a viable alternative. Cement blocks were used to anchor the whole structure, one at each corner of the raft (although adjacent Rafts could share anchors)
-
-**IMAGE OF RAFT**
+For the raft method, a small raft was constructed. This raft consisted of 1 metre long 3/4" PVC pipes capped with 3/4" PVC caps at the ends. four 1.5 metre 5mm polypropene ropes were drilled through to ropes. Buoys adhered to the corners of the PVC frame were used to keep the raft afloat, but bottle floats should also be a viable alternative. Cement blocks were used to anchor the whole structure, one at each corner of the raft. (although adjacent Rafts could share anchors)
 
 ![](Images/April%204,%202023%20(initial%20raft%20day)/Me%20with%20raft%20by%20dock.jpeg){fig-align="center" width="331"}
 
@@ -76,9 +82,21 @@ The seamoss was then returned to the crate and reattached to the cultivation lin
 
 **The attachment ropes are intended for measuring the weight, but make removing seamoss far easier.**
 
+### The Site
+
+The cultivation took place in a sad patch roughly 10 metres from shore in water of approximate depth 1.5m. This sand patch was surrounded by Turtle grass beds and is located in the Discovery Bay area, well behind the reef crest. Data on the site was taken on April 14, 2023 using a YSI mulitparameter prbbe yielding the following data:
+
+| Site         | Temperature | DO(%) | DO(g/L) | Salinity | pH   |
+|--------------|-------------|-------|---------|----------|------|
+| Surface      | 26.9        | 69    | 4.9     | 34.08    | 8.01 |
+| Near Bottom  | 28.3        | 98    | 6.4     | 35.69    | 8.21 |
+| Near Surface | 26.8        | 67    | 4.8     | 31.70    | 7.99 |
+
+: Table 1 showing Conditions in the sand patch where cultivation took place
+
+{{< pagebreak >}}
+
 ## Observations and Results
-
-
 
 ```{r}
 #| label: Load Packages
@@ -127,7 +145,7 @@ names<-colnames(dataset)
     labs(title = "Mass of Seaweed Samples at Different Days", x="Day", y="Mass(grams)")+
     theme(plot.title = element_text(hjust = 0.5),legend.position = "none")
   p.interactive<-ggplotly(p, tooltips = c("x","y", "text"))
-  print(p)
+  print(p + facet_wrap(data$Method))
   #p.interactive
 ```
 
@@ -209,9 +227,9 @@ graph.3<-ggplot(data, mapping = aes(x = Day, y = percent.k, colour = Identifier)
     geom_point(alpha = 0.8, size = 2)+
     geom_line(alpha = 0.8)+
     labs(x="Days", y = "percentage Growth Rate(k)", title="Percentage Growth Rate showing mean")+
-    geom_hline(yintercept = avg.percent.growth, linetype = "dashed", size = 1)+
+    #geom_hline(yintercept = avg.percent.growth, linetype = "dashed", size = 1)+
     #geom_ribbon(alpha =0.1, aes(ymax=avg.percent.growth+sd.percent.growth, ymin = avg.percent.growth-sd.percent.growth))+#shows std deviation
-    theme(plot.title = element_text(hjust = 0.5))
+    theme(plot.title = element_text(hjust = 0.5), legend.position = "none")
   #graph.3<-ggplotly(graph.3)
  print(graph.3)
 
@@ -248,9 +266,7 @@ graph.5<-ggplot(d2, mapping=aes(x = Day, y = mean.mass))+
   print(graph.5)
 ```
 
-Mean and total mass change over time show essentially the story. The samples essentially tripled in mass in 5 weeks. The mean mass of all samples increased 296%, while the total mass of all samples increased 316% over 5 weeks.
-
-Assuming a number of values the researcher heard informally as selling prices per unit wieght. Prices ranged from \$2000 to \$5000 so an intermediate value of \$3500 was used in calculating the potential revenue
+Assuming a number of values the researcher heard informally as selling prices per unit weight. Prices ranged from \$2000 to \$5000 so an intermediate value of \$3500 was used in calculating the potential revenue.
 
 ```{r}
 #| echo: false
@@ -273,42 +289,100 @@ Assuming a number of values the researcher heard informally as selling prices pe
   print(rev.plot)
 ```
 
-Throughout the process of cultivating the Seamoss, several observations were made by the researcher.
+Throughout the process of cultivating the Seamoss, several observations were made by the researcher, which are relevant to potential future cultivation in Jamaica.
 
-1.  Ice-Ice
-2.  Cleaning + Fouling
-3.  Fragmenting/Reserve Stock
-4.  Colour changes
+Upon undergoing shock, the *Eucheuma cotonii* undergoes a response which is similar to the disease known as "ice-ice". This takes the form paling and whitening of the thallus. The tissue softens and eventually sloughs off. This results in breakage, and consequently lost mass of the seaweed.
+
+![Image showing ice-ice in the Euchuema cotonii](Images/April%2017,%202023/Ice%20Ice.jpg){fig-align="center" width="352"}
+
+This shock response can be recovered from, and new growth can occur at tips where breakage from ice ice has occurred. However this obviously takes time and reduces the size(and detracts from the growth which would have occurred in the absence of breakage.)
+
+![Image showing the characteristic breakage and paling](Images/April%2017,%202023/Ice%20Ice%20Breakage.jpg){fig-align="center" width="344"}
+
+This shock can be brought on by extended period out of the water. During the experiment, the seamoss was only out of water for measurement for approximately half an hour at a time. This time was not sufficient to induce the shock response. Sudden changes in salinity, temperature and light intensity.
+
+Originally when the seaweed was brought up to be cut, separated and placed onto the raft and off-bottom lines, some of the shock response was seen as seen in the images above. The response eventually faded and growth proceeded. It must be noted however that if the breakage occurs near where the seaweed is attached to the cultivation line it can easily come lose and be lost to waves.
+
+Measurement did not begin immediately after the rafts were deployed, but some time was allowed for the seaweed to acclimatize. The Off-bottom seaweed was deployed later and so took longer to acclimatize, with some ice-ice associated breakage seen in early weeks.
+
+The raft method in particular experiences a great deal of fouling. For the most part, this fouling builds up on the ropes and PVC, and not much on the crop itself. However, it must still be cleaned. The crop itself can be brushed off, shaken in the water, or shaken above and below the waterline. The ropes and PVC can be rubbed with gloves or a coarse brush. If the site is particularly silty, or fouls particularly fast cleaning more often that twice a week may be needed. However under research conditions, the seaweed was cleaned once a week and the Raft itself cleaned every 2 to 3 weeks.
+
+![Fouling build up 3 weeks into Raft deployment](Images/Fouling%20Buildup%20on%20PVC%2026-04-2023.jpg){fig-align="center" width="342"}
+
+The off-bottom method however experienced almost no fouling.
+
+Over the process of tending the seaweed, some small degree of breakage was noted. For the most part this is fine. Measured growth rates were sufficient to warrant interest in spite of any breakage seen. Furthermore, the broken fragments continue to grow and regenerate, and may establish smaller stocks if they settle somewhere favourable. These reserves can be used later if significant amounts of the cultivating stock is lost.
+
+The seaweed stock is also found to change colour. In general, this is an indicator of depth. Under lower light intensities, a more reddish colour is seen. whereas in more direct light, the colour is a yellow-green. This often takes the form of the underside of the crop which does not face the sun behind red, while the other, top facing surface is yellow-green.
+
+![Image of crate clearly showing the colour difference in irish moss](Images/April%204,%202023%20(initial%20raft%20day)/Crate%20full%202.jpg){fig-align="center" width="351"}
+
+{{< pagebreak >}}
 
 ## Discussion
 
--   Growth rates
--   Maintenance
--   Good Practices
--   Potential revenue
--   Potential Material substitutes
+### Growth rates
 
-Potential issues that need to be solved:
+The growth rates of the *Eucheuma cotonii* were found to be very encouraging. All samples saw noticeable growth over the 6 week cultivation period as seen in figure 1. While a few samples initially showed some decrease in mass due to ice-ice breakage, these samples recovered their original mass within 2 weeks and surpassed it.
 
--   Larceny
--   Site Selection
--   Market
+While the mean mass growth rate is 6.97g/day, this data is too scattered to be of much use as seen in figure 3. This is largely due to the large difference in the starting size of the *Eucheuma* fragments. Instead, the percentage mass growth per day is far more useful. As seen in figure 4, despite the huge variation in the absolute masses of the fragments, the percentage mass changes fall into a close band. The mean percentage growth is 4.5% per day. With the exceptions of a few outliers, all the growth falls between 3% and 7% growth per day. Also of note, is this growth rate appeared to slow as the weeks went on.
+
+This may indicate a phase of growth in response to cutting/fragmentation which then plateaus. If this is the case, regular fragmentation for sale and replanting at the end of a harvest cycle will likely improve stock growth.
+
+At the levels of growth seen, it took approximately 13-15 days for the mass of sea-moss to double. If this level of growth is consistent, only three harvest cycles would be needed to convert a small 10kg starting stock into a farm capable of produce 100s of kilograms of wet Euchuema every 6 weeks.
+
+### Potential Revenue
+
+Over the course of the project, through conversation, a number of selling prices though-out Jamaica for Irish moss were gathered. These selling prices ranged from \$2000 jmd per pound to \$5000 per pound. Using a mid range price of \$3500 was used to project the earnings. This information is seen in figure 6, showing that significant revenue can be generated selling the seamoss locally.
+
+It is advised that a reserve stock be established nearby. Occasionally, during cleaning, wave action or other events, some Euchuema will become broken off. The plant is capable of regenerating. The fragments will also settle and begin regrowing is the site and conditions support it. If fragments do break, it make sense to use them to establish a reserve in some favourable location. In the event of a complication, this reserve can be used to reestablish the cultivation stock. It can also be used for potential expansion later if it is left time and sufficient sea-moss to regrow. This process can also help establish nearby favourable sites, by seeing if the sea moss grows healthily where the fragments settle.
+
+The selection of a good site is perhaps one of the most important elements of establishing a potential seaweed farm. Further research will be conducted with different sites to see what is feasible but until this is available, sites with conditions as close to the pilot site are advised.
+
+{{< pagebreak >}}
 
 ## Further Recommendations for Future study
 
--   More Sites
--   More Species
--   More Samples/Replicates
--   New Method? (Net)
--   Samples more uniform in size
--   More anchors for raft
--   Dont drill raft
--   
+-   More Sites: Test growing at other sites throughout the bay, take YSI data and potentially NPK?
+
+-   More Species: *Eucheuma cotonii* is not the only "Irish moss" or potentially valuable species, try growing more. Namely There are known locations where Gracilaria verrucosa and domingensis can be found.
+
+-   More Samples/Replicates: particularly for the off bottom, get more replicates for more accurate data
+
+-   New Methods: If materials allow, attempt floating longline or net culture
+
+-   Samples more uniform in size: the wide range in size makes collecting data iffy. if possible, while cultivating all, try to have all measured samples fall around a certain mass range
+
+-   More anchors for raft - anchor raft at each corner to minimize twisting
+
+-   Don't drill raft - try a rolling hitch to secure it, adds more buoyancy, decreasing need for floats.
+
+-   Material substitution: To what extent can bamboo be substituted for PVC and rebar? is it cheaper, does it hold up longer(or at least for a harvest cycle), can bottle floats be substituted for buoys
+
+    {{< pagebreak >}}
 
 ## References
 
-Canari manual
+Food and Agriculture Organization (FAO), 1988. "Manual on Seaweed Farming". Retrieved from <https://www.fao.org/3/ac416e/ac416e00.htm>
+
+Caribbean Natural Resource Institute. 1997. "Sea Moss Cultivation in the West Indies." retrieved from <https://canari.org/wp-content/uploads/2019/07/CANARI-Guideline-Series-1.-Seamoss-Cultivation-in-the-West-Indies.pdf>
+
+Food and Agriculture Organization(FAO). . "The Artificial culture of Gracilaria". Retrieved from <https://www.fao.org/3/AB730E/AB730E02.htm#chII.3>
+
+Foscarini, Roberto and Jayant Prakash. 1990. "Handbook on Eucheuma Seaweed Cultivation in Fiji", Ministry of Primary Industries
+
+<https://www.researchgate.net/publication/352199499_Ice-ice_Disease_in_Commercially_Cultivated_Seaweeds_Kappaphycus_and_Eucheuma_A_Review_on_the_Causes_Occurrence_and_Control_Measures>
+
+<https://www.researchgate.net/publication/282265627_Controling_of_the_ice-ice_disease_on_seaweed_through_polyculture_cultivation_techniques>
+
+<https://gsconlinepress.com/journals/gscbps/sites/default/files/GSCBPS-2022-0382.pdf>
+
+<https://link.springer.com/article/10.1007/s10811-019-01805-w>
+
+<https://onlinelibrary.wiley.com/doi/abs/10.1111/raq.12606>
+
+{{< pagebreak >}}
 
 ## Acknowledgements
 
-I must express my immense gratitude to the Discovery Bay Marine Lab. Without the generous allowance for the use of lab space, and starting stock this project could not have taken place. Special thanks to Shanna Lee Thomas, Chief Scientific Officer at the Discovery Bay Marine Lab for her assistance, guidance and giving the freedom for this project
+I must express my immense gratitude to the Discovery Bay Marine Lab. Without the generous allowance for the use of lab space, and starting stock this project could not have taken place. Special thanks to Shanna Lee Thomas, Chief Scientific Officer at the Discovery Bay Marine Lab for her assistance, guidance and giving the freedom for this project. Thanks to Calese Hare for assisting in collecting YSI data during the project.
