@@ -161,7 +161,7 @@ d2<-data |> group_by(Day) |> mutate (Day = as.factor(Day))
     geom_jitter(alpha = 0.8, colour = "grey")+
     labs(title="Boxplot of mass at each day")+
     theme(plot.title = element_text(hjust = 0.5))
-  print(d2)
+  #print(d2)
 ```
 
 Below are the results of the mean growth of the *Euchuema* grown over the period:
