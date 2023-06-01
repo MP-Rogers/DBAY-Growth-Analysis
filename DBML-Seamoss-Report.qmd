@@ -1,5 +1,5 @@
 ---
-title: "DBML Irish Moss Cultivation Project Science Draft 1.0"
+title: "DBML Irish Moss Cultivation Project Science Draft 1.1"
 author: "Matthew-Pierre Rogers"
 format: pdf
 theme: journal
@@ -9,7 +9,7 @@ toc: true
 prefer-html: true
 ---
 
-Last Edit: may 29, 2023
+Last Edit: June 1, 2023
 
 {{< pagebreak >}}
 
@@ -19,6 +19,8 @@ Last Edit: may 29, 2023
 
 ![Images of Matthew-Pierre Rogers with a line of Eucheuma as it Grows](Images/WhatsApp%20Image%202023-05-29%20at%202.45.37%20PM.jpeg){fig-align="center" width="427"}
 
+![Raft on May 31, 2023 after cultivation](Images/May%2031,%202023/Lifted%20Raft%20May%2031,%202023.jpg){fig-align="center" width="414"}
+
 {{< pagebreak >}}
 
 This project serves as a preliminary attempt to begin the cultivation of Irish Moss, *Eucheuma cotonii*, at the Discovery Bay Marine Lab. This document outlines some of the rationale, methods and procedures and results undertaken during the course of this project.
@@ -27,7 +29,7 @@ This project serves as a preliminary attempt to begin the cultivation of Irish M
 
 Jamaica has been noted to have some of the most overfished waters in the Caribbean. At the same time, the territory has over 20 000 fisherfolk who are experiencing less income as a result of the lower quantities of smaller lower quality fish which are caught.
 
-At the same time, environmental degradation from development, climate change and the ecosystem effects of overfishing further reduce the sustainability and productivity of the fisheries sector.
+At the same time, environmental degradation from development, climate change and the ecosystem effects of overfishing and other human activity further reduce the sustainability and productivity of the fisheries sector.
 
 Seaweed mariculture provides the unique opportunity for fisherfolk and fisherfolk communties to use much of their existing skillset, to transition to a sustainable alternative livelihood.
 
@@ -37,14 +39,14 @@ Seaweed mariculture provides the unique opportunity for fisherfolk and fisherfol
 
 Jamaica has a tradition of utilizing seaweeds in some traditional foods and beverages. Many species collectively called "Sea moss" and "Irish Moss" are consumed locally. As with many sales of agricultural/natural products, many sales occur informally.
 
-However, effectively all the seamoss sold locally is harvested from wild populations by divers and fisher folk. Despite the high value of the product, (over the course of the project, prices per pound ranged from \$2000 to \$5000 jmd), there is no cultivation of the seamoss, which can lead to depletion of natural stocks.
+However, effectively all the seamoss sold locally is harvested from wild populations by divers and fisher folk. Despite the high value of the product, (over the course of the project, prices per pound ranged from \$2000 to \$5000 jmd), there is no cultivation of the sea moss, which can lead to depletion of natural stocks.
 
 The project seeks to explore the potential viability of cultivating irish moss locally. Specifically this project involves a small scale cultivation of *Euchuema cotonii* using different methods.
 
 ## Rationale
 
--   The production and cultivation of Seaweeds such Irish Moss represent a new income earner for coastal communities
--   Proposing an alternative income for fisherfolk can ease fishing pressure and allow fish stocks to recover
+-   The production and cultivation of seaweeds such Irish Moss represent a new income earner for coastal communities
+-   providing an alternative income for fisherfolk can ease fishing pressure and allow fish stocks to recover
 -   Potential income to supplement the revenue of marine parks and sanctuaries
 -   The Seaweeds cultivated can provide the raw materials for producing new or more value added products
 
@@ -88,7 +90,7 @@ The seamoss was then returned to the crate and reattached to the cultivation lin
 
 ### The Site
 
-The cultivation took place in a sand patch roughly 10 metres from shore in water of approximate depth 1.5 metres. This sand patch was surrounded by Turtle grass beds and is located in the Discovery Bay area, well behind the reef crest. Data on the site was taken on April 14, 2023 using a YSI mulitparameter prbbe yielding the following data:
+The cultivation took place in a sand patch roughly 10 metres from shore in water of approximate depth 1.5 metres. This sand patch was surrounded by seagrass beds(*Thalassia testudinum*) and is located in the Discovery Bay Special Fisheries Conservation Area, well behind the reef crest. This site is known to have a number of freshwater upwellings where freshwater seems up through the underlying limestone into the Bay. The *Eucheuma* was grown in one such sand patch. Data on the site was taken on April 14, 2023 using a YSI mulitparameter probe yielding the following data:
 
 +--------------+-------------+----------+----------+----------+----------+
 | Site         | Temperature | DO(%)    | DO(g/L)  | Salinity | pH       |
@@ -258,7 +260,7 @@ graph.3<-ggplot(data, mapping = aes(x = Day, y = percent.k, colour = Identifier)
     geom_line(alpha = 0.8)+
     labs(title="Total mass of sampled seaweed over time")+
     ylab("Mass of all seaweed sampled (grams)")+
-    theme(plot.title = element_text(hjust = 0.5))
+    theme(plot.title = element_text(hjust = 0.5), legend.position = "none")
   #graph.4<-ggplotly(graph.4)
   print(graph.4)
 ```
@@ -311,17 +313,17 @@ This shock response can be recovered from, and new growth can occur at tips wher
 
 ![Image showing the characteristic breakage and paling](Images/April%2017,%202023/Ice%20Ice%20Breakage.jpg){fig-align="center" width="344"}
 
-This shock can be brought on by extended period out of the water. During the experiment, the seamoss was only out of water for measurement for approximately half an hour at a time. This time was not sufficient to induce the shock response. Sudden changes in salinity, temperature and light intensity are partially responsible for this shock response, as even samples not removed from water for long periods showed these responses when moved to areas with different water conditions. For example when the seaweed was moved from the sand patch to shallower saltier water for a few days, ice-ice was noted.
+This shock can be brought on by extended period out of the water. During the experiment, the sea moss was only out of water for measurement for approximately half an hour at a time. This time was not sufficient to induce the shock response. Sudden changes in salinity, temperature and light intensity are partially responsible for this shock response. Samples not removed from water for long periods showed these responses when moved to areas with different water conditions. For example when the seaweed was moved from the sand patch to shallower saltier water for a few days, ice-ice was noted.
 
-Originally when the seaweed was brought up to be cut, separated and placed onto the raft and off-bottom lines, some of the shock response was seen as seen in the images above. The response eventually faded and growth proceeded. It must be noted however that if the breakage occurs near where the seaweed is attached to the cultivation line it can easily come lose and be lost to waves.
+Originally when the seaweed was brought up to be cut, separated and placed onto the raft and off-bottom lines, some of the shock response was seen as seen in the images above. The response eventually faded and growth proceeded. It must be noted however, that if the breakage occurs near where the seaweed is attached to the cultivation line it can easily come loose, detatch and be lost to waves.
 
 Measurement did not begin immediately after the rafts were deployed, but some time was allowed for the seaweed to acclimatize. The off-bottom seaweed was deployed later and so took longer to acclimatize, with some ice-ice associated breakage seen in early weeks.
 
-The raft method in particular experiences a great deal of fouling. For the most part, this fouling builds up on the ropes and PVC, with less on the crop itself. However, it must still be cleaned. The crop itself can be brushed off, shaken in the water, or shaken above and below the waterline. The ropes and PVC can be rubbed with gloves or a coarse brush. If the site is particularly silty, or fouls particularly fast cleaning more often that twice a week may be needed. However under research conditions, the seaweed was cleaned once a week and the Raft itself cleaned more thoroughly every 2 to 3 weeks.
+The raft method in particular experiences a great deal of fouling. This fouling material can tak the form of silt or other algae. For the most part, this fouling builds up on the ropes and PVC, with less on the crop itself. However, it must still be cleaned. The crop itself can be brushed off, shaken in the water, or shaken above and below the waterline. The ropes and PVC can be rubbed with gloves or a coarse brush. If the site is particularly silty, or fouls particularly fast cleaning more often that twice a week may be needed. However under research conditions, the seaweed was cleaned once a week and the Raft itself cleaned more thoroughly every 2 to 3 weeks.
 
 ![Fouling build up 3 weeks into Raft deployment](Images/Fouling%20Buildup%20on%20PVC%2026-04-2023.jpg){fig-align="center" width="342"}
 
-The off-bottom method however experienced almost no fouling. In light of growth rates not being significantly different, the off bottom method seems a viable methodology, especially when starting euchuema cultivation or when the attention which can be devoted to maintaining it is lower.
+The off-bottom method however experienced almost no fouling. In light of growth rates not being significantly different, the off bottom method seems a viable methodology, especially when starting *Euchuema* cultivation or when the attention which can be devoted to maintaining it is lower.
 
 Over the process of tending the seaweed, some small degree of breakage was noted. For the most part this is fine. Measured growth rates were sufficient to warrant interest in spite of any breakage seen. Furthermore, the broken fragments continue to grow and regenerate, and may establish smaller stocks if they settle somewhere favourable. These reserves can be used later if significant amounts of the cultivating stock is lost.
 
@@ -341,7 +343,9 @@ The growth rates of the *Eucheuma cotonii* were found to be very encouraging. Al
 
 ![Raft showing size of seaweed samples April 12, 2023](Images/April%2012,%202023/Raft%20Image%201.jpg){fig-align="center" width="447"}
 
-![Raft May 24, 2023 showing increase in size of seaweed](Images/May%2024,%202023/Raft%203.jpg){fig-align="center" width="414"}
+![Raft May 24, 2023 showing increase in size of seaweed](Images/May%2024,%202023/Raft%203.jpg){fig-align="center" width="442"}
+
+![Matthew-Pierre Rogers and Andrew Dorsey Lifting Raft on May 31, 2023](Images/May%2031,%202023/Lifted%20Raft%20May%2031,%202023.jpg){fig-align="center"}
 
 While a few samples initially showed some decrease in mass due to ice-ice breakage, these samples recovered their original mass within 2 weeks and grew well beyond their original mass.
 
@@ -349,15 +353,15 @@ While the mean mass growth rate is 6.97g/day, this data is too scattered to be o
 
 This may indicate a phase of growth in response to cutting/fragmentation which then plateaus. If this is the case, regular fragmentation for sale and replanting at the end of a harvest cycle will likely improve stock growth. This however requires further study.
 
-At the levels of growth seen, it took approximately 13-16 days for the mass of sea-moss to double. If this level of growth is consistent, only between 3 and 4 harvest cycles would be needed to convert a small 10kg starting stock into a farm capable of produce 100s of kilograms of wet *Euchuema* every 6 weeks. This however assumes that all seamoss is being used for cultivation, which may not be feasible.
+At the levels of growth seen, it took approximately 13-16 days for the mass of sea moss to double. If this level of growth is consistent, only between 3 and 4 harvest cycles would be needed to convert a small 10kg starting stock into a farm capable of produce 100s of kilograms of wet *Euchuema* every 6 weeks. This however assumes that all sea moss is being used for cultivation, which may not be feasible.
 
 ### Potential Revenue
 
-Over the course of the project, through conversation, a number of selling prices though-out Jamaica for Irish moss were gathered. These selling prices ranged from \$2000 jmd per pound to \$5000 per pound. Using a mid range price of \$3500 was used to project the earnings. This information is seen in figure 6, showing that significant revenue can be generated selling the seamoss locally.
+Over the course of the project, through conversation, a number of selling prices through-out Jamaica for irish moss were gathered. These selling prices ranged from \$2000 jmd per pound to \$5000 per pound. Using a mid range price of \$3500 was used to project the earnings. This information is seen in figure 6, showing that significant revenue can be generated selling the sea moss locally.
 
 ### Reserve Establishment
 
-It is advised that a reserve stock be established nearby. Occasionally, during cleaning, wave action or other events, some Euchuema will become broken off. The plant is capable of regenerating. The fragments will also settle and begin regrowing is the site and conditions support it. If fragments do break, it make sense to use them to establish a reserve in some favourable location. In the event of a complication, this reserve can be used to reestablish the cultivation stock. It can also be used for potential expansion later if it is left time and sufficient sea-moss to regrow. This process can also help establish nearby favourable sites, by seeing if the sea moss grows healthily where the fragments settle.
+It is advised that a reserve stock be established nearby. Occasionally, during cleaning, wave action or other events, some *Eucheuma* will become broken off. The plant is capable of regenerating. The fragments will also settle and begin regrowing if the site and conditions support it. If fragments do break, it makes sense to use them to establish a reserve in some favourable location. In the event of a complication, this reserve can be used to reestablish the cultivation stock. It can also be used for potential expansion later if it is left time and sufficient sea-moss to regrow. This process can also help establish nearby favourable sites, by seeing if the sea moss grows healthily where the fragments settle or are scattered.
 
 ### Site Selection
 
@@ -385,9 +389,13 @@ This includes locating a site with coarse white sand which will settle quickly. 
 
 -   Material substitution: To what extent can bamboo be substituted for PVC and rebar? is it cheaper, does it hold up longer(or at least for a harvest cycle), can bottle floats be substituted for buoys
 
+-   Cost to set up a raft using current materials?
+
     {{< pagebreak >}}
 
 ## References
+
+Biag, Darwin. Cuadro, Jansen. Nolial, John Christopher. De Lemios, Ronald. Ediora, Christian. Hombre, Richmond. Sape, John Cris. Visitacion, Marlon and Lucy Elep jr. 2022. "How to prevent early onset of Epiphyte and Ice-ice disease in cultivated seaweeds Kappaphycus, Camarines Norte Phillipines." *GSC Biological and Pharmaceutical Sciences, 21. 01*. retrieved from <https://gsconlinepress.com/journals/gscbps/sites/default/files/GSCBPS-2022-0382.pdf>
 
 Caribbean Natural Resource Institute. 1997. "Sea Moss Cultivation in the West Indies." retrieved from <https://canari.org/wp-content/uploads/2019/07/CANARI-Guideline-Series-1.-Seamoss-Cultivation-in-the-West-Indies.pdf>
 
@@ -395,13 +403,11 @@ Food and Agriculture Organization (FAO), 1988. "Manual on Seaweed Farming". Retr
 
 Food and Agriculture Organization(FAO). 1990. "The Artificial culture of Gracilaria". Retrieved from <https://www.fao.org/3/AB730E/AB730E02.htm#chII.3>
 
-Foscarini, Roberto and Jayant Prakash. 1990. "Handbook on Eucheuma Seaweed Cultivation in Fiji", Ministry of Primary Industries
+Foscarini, Roberto and Jayant Prakash. 1990. "Handbook on Eucheuma Seaweed Cultivation in Fiji", Ministry of Primary Industries. Retrieved from <https://www.fao.org/3/AC287E/AC287E00.htm>
 
 Tahiluddin, Albaris and Ertugrul Terzi. 2021. "Ice-Ice disease in commercially cultivated seaweeds Kappaphycus and Eucheuma: A review on the causes, occurrence and Control Measures". *Marine Science and Technology Bulletin. 10, 3*, retrieved from <https://www.researchgate.net/publication/352199499_Ice-ice_Disease_in_Commercially_Cultivated_Seaweeds_Kappaphycus_and_Eucheuma_A_Review_on_the_Causes_Occurrence_and_Control_Measures>
 
 Tokan, Moses. 2015. "Controlling the ice-ice disease on seaweed through polyculture cultivation techniques." *Asian Journal of Microbiology* 17. 1. ,retrieved from <https://www.researchgate.net/publication/282265627_Controling_of_the_ice-ice_disease_on_seaweed_through_polyculture_cultivation_techniques>
-
-Biag, Darwin. Cuadro, Jansen. Nolial, John Christopher. De Lemios, Ronald. Ediora, Christian. Hombre, Richmond. Sape, John Cris. Visitacion, Marlon and Lucy Elep jr. 2022. "How to prevent early onset of Epiphyte and Ice-ice disease in cultivated seaweeds Kappaphycus, Camarines Norte Phillipines." *GSC Biological and Pharmaceutical Sciences, 21. 01*. retrieved from <https://gsconlinepress.com/journals/gscbps/sites/default/files/GSCBPS-2022-0382.pdf>
 
 Ward, Georgia. Kambey, Cicilia. Faisan, Joseph. Tan, Pui-Ling. Daumich, Caroline. Matoju, Ivy. Stentiford, Grant. Bass, David., Lim, Phaik-Eem. Brodie, Juliet. and Sze-Wan Poong. 2021. "Ice-Ice Disease: an environmentally and microbiologically driven syndrome in tropical seaweed aquaculture." *Reviews in Aquaculture*. retrieved from <https://onlinelibrary.wiley.com/doi/abs/10.1111/raq.12606>
 
@@ -409,4 +415,4 @@ Ward, Georgia. Kambey, Cicilia. Faisan, Joseph. Tan, Pui-Ling. Daumich, Caroline
 
 ## Acknowledgements
 
-I must express my immense gratitude to the Discovery Bay Marine Lab. Without the generous allowance for the use of lab space, and starting stock this project could not have taken place. Special thanks to Shanna Lee Thomas, Chief Scientific Officer at the Discovery Bay Marine Lab for her assistance, guidance and giving the freedom for this project. Thanks to Calese Hare for assisting in collecting YSI data during the project. Thanks to Ginelle brown for assisting in collecting YSI data and in taking some of the photographs.
+I must express my immense gratitude to the Discovery Bay Marine Lab. Without the generous allowance for the use of lab space, and starting stock this project could not have taken place. Special thanks to Shanna Lee Thomas, Chief Scientific Officer at the Discovery Bay Marine Lab for her assistance, guidance and giving the freedom for this project. Thanks to Calese Hare for assisting in collecting YSI data during the project. Thanks to Ginelle brown for assisting in collecting YSI data and in taking some of the photographs. Thanks to Cor and Andrew Dorsey as well.
