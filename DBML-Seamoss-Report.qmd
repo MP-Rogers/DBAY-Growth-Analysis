@@ -62,6 +62,90 @@ There are several aims and objectives undertaken with this project:
 
 {{< pagebreak >}}
 
+## Literature Review
+
+The culture of seaweeds/macroalgae has been established in other parts of the world for decades. This literature review will review manuals and resources from other parts of the world for use in a pilot project at the Discovery Bay Marine Lab. The principal regions with existing traditional seaweed mariculture which are reviewed include China, and the Philippines. Attempts have been made in other Caribbean territories such as St. Lucia to establish seaweed agriculture. Jamaica has also previously had initiatives to cultivate seaweed, however these initiatives seem to have been abandoned.
+
+In the Caribbean, prior to 1980, all sea moss was wild harvested from natural stocks. The region has different names for these seaweeds, in Jamaica they are collectively referred to as irish moss, while other territories collectively refer to the seaweeds as seamoss.. The most common are varieties of Gracilaria and Eucheuma. In 1980, in light of high demand leading to the depletion of natural stocks, St. Lucia began a process of developing methods for cultivation instead of wildharvest. A working farm was established in 1985 and the technology was exported to other Caribbean islands including Jamaica. (CANARI 1998)
+
+For the purpose of this pilot project. The aims are to attempt a small scale cultivation of sea moss for one to two cultivation cycles. The growth rates of seamoss will be measured and calculated to provide a reasonable estimate of potential yields in the bay. The conditions for suitable site selection will also be reviewed and tested. 
+
+There are a number of accepted methods of cultivation, most of which appear in several manuals. Among these are Line (or line and stake) culture, floating line culture, and floating net culture. There also exists a floating tidal raft method.
+
+The major  methods of cultivation are as follows:
+
+1.  Off bottom methods
+
+    1.  Line and stake
+
+    2.  Net
+
+2.  Floating
+
+    1.  Raft
+
+    2.  Net
+
+    3.  Longline
+
+The line and stake method involves stakes of appropriate wood being hammered into the substrate. The stakes have been made of white mangrove wood, or bamboo in different territories. Rope is tied between stakes and seaweed is attached to the rope. The seaweed can either be tied to another rope which is attached to the mainline, or the main rope can be untwisted and the frond is inserted.  The seaweed fronds inserted are to be between 50-100g and should be inserted 10-20 cm apart. The ropes are to be 76cm/29" off the substrate. Stakes can be placed 10 m apart to the desired length.
+
+For the floating line method, stakes are only needed at either end of the rope. Buoys or bottle floats are placed every 3 feet to help keep the line off the substrate near the surface.
+
+For the raft method, ropes are stretched between 2 metre poles of wood or bamboo. The poles are anchored to the substrate and the seaweed is inserted into these ropes. Floats can be attached to each pole to help keep it afloat and properly oriented.
+
+The net method is similar to the raft method, a 2.5 x 5m met with diagonal meshing is installed parallel to the surface of the water. Seaweed fronds are installed at the intersection points on the netting. This method provides the highest potential yields per unit area.(FAO)
+
+The methods can be combined and modified as needed to suit context and the specific needs and circumstances.
+
+Measurement methods are similar among the various manuals and resources globally. The primary quantity used to measure growth is the change in the wet weight or biomass over time. 
+
+The two established methods of measurement vary with the cultivation method. Individual fronds of seaweed can be measured for more accurate and precise data. Alternatively the drained fresh weight of entire lines can be taken for more easily obtained but less accurate data.
+
+According to the CANARI manual, 3-4m lengths of line with seaweed attached can be weighed weekly to measure productivity. This data can yield productivity per metre of line. It is most convenient when using a line and stake method.
+
+The individual fronds can also be weighed for more accurate data. 10-20 fronds per sample treatment is the prescribed number of replicates. 
+
+According to CANARI, for ease of measurement, 10cm pieces of rope are to be cut. The ends of these ropes are to be burned to reduce fraying, and the rope is to be knotted at the end. A tag with an identifier is to be attached to each rope. A frond of seaweed is placed into the end of the rope as it is untwisted. The rope is then twisted into the mainline.
+
+ These samples are removed from the growing line, cleaned, blotted dry and their weights recorded. After this they are replaced on the line. The seamoss does not need to be carried in water, but should be kept from hot places and covered with a damp cloth. The seaweed can be tagged, and the tag need not be removed for each weighing, provided its mass is taken beforehand, or at the end of the harvest cycle. It is estimated that a minimum of six weeks is needed for accurate data and 8 is recommended. This aligns with the 6-8 week length of one harvest/growth cycle.
+
+```         
+Also of note, the project will be carried out at the Discovery Bay Marine Lab which lies in a special fisheries conservation area. Within this area, fishing is prohibited to allow fish stocks to regenerate and spread to the surrounding area. It is unknown whether this possible increased fish stock may interfere with the seamoss by feeding on it, but this will also be assessed. 
+```
+
+Roberto and Prakash (1990) note that Euchuema can grow better in winter months and can grow up to x10 (900%) in 6-8 weeks. They also note that the ability to propagate vegetatively is a huge asset. The source also outlines a number of conditions for an ideal site.
+
++-------------+--------------------------------------------------------------------------------------+
+| Temperature | 25-30C                                                                               |
++-------------+--------------------------------------------------------------------------------------+
+| Salinity    | 28ppt to 36ppt                                                                       |
++-------------+--------------------------------------------------------------------------------------+
+| Substrate   | White sand (not mud or seagrass)                                                     |
++-------------+--------------------------------------------------------------------------------------+
+| Current     | Moderate but not strong, oriented to flow through the farm(not hit it perpendicular) |
++-------------+--------------------------------------------------------------------------------------+
+| Location    | Between lowest tide and reef crest                                                   |
++-------------+--------------------------------------------------------------------------------------+
+| Light       | 30-50cm of surface, not below 1metre                                                 |
++-------------+--------------------------------------------------------------------------------------+
+| Depth       | At least 50cm at low tide                                                            |
++-------------+--------------------------------------------------------------------------------------+
+
+Roberto and Prakash's off-bottom method resembles the stakes and line. Stakes of appropriate wood, 1-1.5m in length are driven into the ground 25cm apart. The starting stock is fist sized, roughly 150 grams and these are tied via polypropylene strings to the pain 5mm line using polypropylene string and a slipknot.
+
+         
+The floating raft method uses 4 2.5m bamboo poles to construct a frame with 15 lines between it. Each line can accommodate 15 pieces of seaweed. This method requires anchorage and possibly extra floats depending on the frame.
+
+The floating longline uses thicker 10mm rope with floaters attached every 3-4m.
+
+For both floating methods, seaweed should be 20-30cm below the surface.
+
+
+While handing seaweed, they need not be submerged, they can manage out of water for short periods if covered with damp cloth/tarpaulin. Overnight they should be held in aerated seawater.
+
+{{< pagebreak >}}
+
 ## Methods
 
 For this project, *Eucheuma cotonii*, one of many species of seaweed commonly known as "irish moss", was grown using two methods in the Discovery Bay Area. These methods were a floating raft method and an off-bottom method. Both set ups were implemented in same area to cultivate the *Eucheuma* over a six week period as suggested by the literature.
